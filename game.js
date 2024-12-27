@@ -52,10 +52,10 @@ function hideOptions() {
 
 function displayEnding() {
     const endingText = score === 3
-        ? "結局 10-1：竟然是江！「好久不見，兄弟，我早就聽說你在加拿大的抬「頭」挺胸的事蹟囉，快跟我說吧。」"
+        ? "結局 10-1：不小心殺死他了！大家嚇死了！重來一次逼"
         : score >= 1
-        ? "結局 10-2：你搞砸了一切! 但好險有呂，他不發一聲的知道你回程班機時間跑來等你，你真的很感謝他，並且發誓之後每個月要飯也要給他五千。"
-        : "結局 10-3：是Maggie！你認真對待感情，她決定提早跟你一起回來共同生活。";
+        ? "結局 10-2：小八被抓走了！你只好按下重新整理，再重來一次試試看"
+        : "結局 10-3：你們和平的把它趕走了！這是最好的結局！你撿到了一張它身上掉下來的紙條，上面寫著「200202」，可以輸入在哪裡呢？。";
     textElement.innerText = endingText;
     imageElement.style.display = "none";
     nextButton.style.display = "none";
