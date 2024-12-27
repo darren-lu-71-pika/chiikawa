@@ -1,9 +1,73 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <!-- 原有的 head 內容保持不變 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加拿大冒險遊戲</title>
     <style>
-        /* 在原有的 style 中加入音樂控制按鈕的樣式 */
+        /* 全局樣式 */
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #game-container {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background: #ddd;
+        }
+        #text {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .options, #nextButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .options button {
+            flex: 1;
+        }
+        /* 音樂控制按鈕樣式 */
         #music-control {
             position: fixed;
             top: 20px;
@@ -21,23 +85,32 @@
     </style>
 </head>
 <body>
-    <!-- 加入音訊元素 -->
+    <!-- 音訊元素 -->
     <audio id="bgMusic" loop>
         <source src="assets/music/music.mp3" type="audio/mp3">
-        <!-- 例如可以放在 assets/music/background.mp3 -->
     </audio>
 
-    <!-- 加入音樂控制按鈕 -->
+    <!-- 音樂控制按鈕 -->
     <div id="music-control">
         <button onclick="toggleMusic()">音樂開關</button>
     </div>
 
-    <!-- 原有的 game-container div 和其他內容保持不變 -->
+    <!-- 遊戲容器 -->
     <div id="game-container">
-        <!-- 原有內容 -->
+        <h1>歡迎來到加拿大冒險！</h1>
+        <img id="image" src="" alt="冒險場景" />
+        <p id="text"></p>
+        
+        <!-- 選項按鈕 -->
+        <div class="options">
+            <button onclick="chooseOption('A')">選項 A</button>
+            <button onclick="chooseOption('B')">選項 B</button>
+        </div>
+        <!-- 下一頁按鈕 -->
+        <button id="nextButton">下個月份</button>
     </div>
 
-    <!-- 在 game.js 之前加入音樂控制腳本 -->
+    <!-- JavaScript -->
     <script>
         const bgMusic = document.getElementById('bgMusic');
         let musicEnabled = false;
@@ -52,7 +125,6 @@
             }
         }
 
-        // 在遊戲開始時（第一次用戶互動）自動播放音樂
         document.addEventListener('click', function initMusic() {
             if (!musicEnabled) {
                 toggleMusic();
