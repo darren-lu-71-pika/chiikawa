@@ -7,16 +7,16 @@ const nextButton = document.getElementById('nextButton');
 
 // 定义每一项的选项内容
 const steps = [
-    { text: "蕭：謝謝啦，呂！還有ET，遠距離應該沒辦法了，就好聚好散吧！", image: "https://photo.travelking.com.tw/scenery/A13E0D24-C211-4DA6-A092-00679E7C4A54_d.jpg" },
-    { text: "你在加拿大拉麵店找到了工作，結交到了一群豬朋狗友（他們都比不上呂）。", image: "https://lh3.googleusercontent.com/p/AF1QipMGIGawlg0grwDrOJrmHwA530_Z5Tbr6nIN9kIN=s680-w680-h510" },
-    { text: "你碰到讓你怦然心動的女孩，她是？", image: "https://lh3.googleusercontent.com/d/1L0lsL_EyMXtDDU9cvznr-kkt5DGAReTx=w500", options: ["哈魯（左）", "AOI（右）"] },
-    { text: "你們交往不順利，最後還是分手了。", image: "https://premium-cdn.parenting.com.tw/files/upload/article-images/5086696-01JD2RGTF00K7TPBHRX5WRFEG6.jpg" },
-    { text: "你換到了台灣餐廳工作，有兩個女同事看起來很閒，你要跟誰搭話？", image: "https://lh3.googleusercontent.com/d/1Sta2iGDDktMgCeHVkjGRQdWhfJjuhYBi=w500", options: ["maggie（中）", "lynn（右二）"] },
-    { text: "你跟Maggie情投意合，再三考慮後還是在一起了。", image: "https://i0.wp.com/godiscovertoday.com/wp-content/uploads/2021/07/IMG-1012-r.jpg" },
-    { text: "你覺得維持關係很累，似乎什麼事都做不好，所以你開始逃避，每天晚上你都…", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f1/a1/51/bar.jpg?w=600&h=400&s=1", options: ["喝酒", "喝爆幹多酒"] },
-    { text: "聖誕節你去了加拿大宜蘭，留下美好回憶。", image: "https://lh3.googleusercontent.com/d/1jBsUpkL-GBcJdKlEC0cCEkIK56P6J1Vg=w500" },
-    { text: "回台灣的時刻到了！下飛機之後你看到的第一個認識的人是？", image: "https://imgs.gvm.com.tw/upload/gallery/20230114/129582.jpg" },
-    { text: "要公布結局啦", image: "https://i0.wp.com/godiscovertoday.com/wp-content/uploads/2021/07/IMG-1012-r.jpg" }
+    { text: "你進到了房間，發現大家開心的在吃壽喜燒，", image: "https://instagram.ftpe7-2.fna.fbcdn.net/v/t51.29350-15/468377897_546877451391009_3092698014751227754_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMjgweDk2MC5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.ftpe7-2.fna.fbcdn.net&_nc_cat=109&_nc_ohc=wVzCk0PkMSYQ7kNvgHHnSFp&_nc_gid=820895d9ed88439d927e076fcdb1c9a0&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzUwODkyNzQ4NTQxNTU4MTI4NQ%3D%3D.3-ccb7-5&oh=00_AYDThPN1-i4EhBYI2b0ruHatsB3XuJ71KFSddbz7Y-jRcw&oe=6773F646&_nc_sid=10d13b" },
+    { text: "吃完之後，大家邀請你一起去外面採小花玩", image: "https://cdn.store-assets.com/s/734801/f/14184711.jpg?width=1200" },
+    { text: "突然間，有一個巨大的身影出現了", image: "https://i0.wp.com/chiikawahk.com/wp-content/uploads/2023/12/image-42.png?w=465&ssl=1", options: ["馬上撤退", "先攻擊看看"] },
+    { text: "吉伊跟小八前往網咖，調查剛剛遇到的大寶寶。", image: "https://today-obs.line-scdn.net/0hRoE3aWG3DUB4Sh2Nni9yF0AcATFLLBdJWi0QdVVOWnBdZkIXQiheI18YUmxceEoWWHhFcghLVSMAeUIQQQ/w1200" },
+    { text: "找到弱點了！但是要怎麼記住呢", image: "https://instagram.ftpe7-1.fna.fbcdn.net/v/t51.29350-15/438390405_796846085655006_3112210963104644207_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMjAweDg1My5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.ftpe7-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=fSLUB8KRqEAQ7kNvgHBv92F&_nc_gid=bb2db2a932614b10af87afab60572aee&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzM0NTQ5MzM5MTE2MDIzNjU2OA%3D%3D.3-ccb7-5&oh=00_AYDPDAE-uMwlrUcBjm7ojEcLY63YUsMbUxxD5q2KhnnRtQ&oe=67741735&_nc_sid=10d13b", options: ["叫他們用筆記下來", "叫他們記在腦子裡"] },
+    { text: "找到了剛剛走散的兔兔了！", image: "https://i.ytimg.com/vi/RKaC2CtO_uc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC-HIgukynEjvmVg9p_MN4HYk1j6g" },
+    { text: "行動之前，大家還是很緊張", image: "https://scontent.ftpe7-2.fna.fbcdn.net/v/t39.30808-6/433263284_815949383906976_2339086421185516309_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HLTiMCCr9g4Q7kNvgGFoz2S&_nc_zt=23&_nc_ht=scontent.ftpe7-2.fna&_nc_gid=A9c9sCljBRVmN8B6ixiPOe-&oh=00_AYBsIHPFpNG0d6l9JI56kYuArXfyxRWwWu60HfcI6iZTxQ&oe=67740575", options: ["信心喊話", "大聲斥責"] },
+    { text: "還讓大家先做個體操暖身！", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrs6iVYYKpo8FazX_MY51vW6rvsFo3GLTDICqs-zZXKffqwyix-Yglr5j-p-3WYRKP9WA&usqp=CAU" },
+    { text: "大家圍著大寶寶，一陣窮追猛打", image: "https://treehole.hk/wp-content/uploads/image-19.png" },
+    { text: "討伐成功了嗎？", image: "https://treehole.hk/wp-content/uploads/Untitled.png" }
 ];
 
 function displayStep() {
